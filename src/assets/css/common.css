@@ -1,0 +1,15 @@
+html,body{
+  width: 100%;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+/* 以后pre标签里面的内容自动换行 */
+pre{
+  white-space:pre-wrap;
+  white-space:-moz-pre-wrap;
+  white-space:-pre-wrap;
+  white-space:-o-pre-wrap;
+  word-wrap:break-word;
+  }
