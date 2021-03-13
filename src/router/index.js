@@ -12,7 +12,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: 'login'
+      redirect: 'admin'
     },
     {
       path: '/login',
@@ -61,6 +61,10 @@ const router = new Router({
         {
           path: 'sourceList',
           component: () => import('@/views/admin/sourceList')
+        },
+        {
+          path: 'caiji',
+          component: () => import('@/views/admin/caiji')
         }
       ]
     }

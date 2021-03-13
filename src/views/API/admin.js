@@ -71,3 +71,8 @@ export async function getSourceListApi (data) {
   const options = {}
   return get(url, data, options)
 }
+export async function getShopListApi (data) {
+  const url = `${contextPath}/tbk/getList`
+  const options = {}
+  return get(url, data, options)
+}

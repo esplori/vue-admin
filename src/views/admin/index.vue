@@ -23,6 +23,10 @@
                   <i class="el-icon-picture-outline"></i>
                   导航管理
                 </el-menu-item>
+                <el-menu-item index="/admin/caiji">
+                  <i class="el-icon-picture-outline"></i>
+                  商品采集
+                </el-menu-item>
                  <el-menu-item index="/admin/sourceList">
                   <i class="el-icon-picture-outline"></i>
                   资源管理
