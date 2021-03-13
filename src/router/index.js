@@ -65,6 +65,10 @@ const router = new Router({
         {
           path: 'caiji',
           component: () => import('@/views/admin/caiji')
+        },
+        {
+          path: 'caijiList',
+          component: () => import('@/views/admin/caijiList')
         }
       ]
     }

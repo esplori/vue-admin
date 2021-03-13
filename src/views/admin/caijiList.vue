@@ -1,12 +1,8 @@
 <template>
   <div class="page-list">
     <div class="handle">
-      <el-button type="primary" @click="start">开始采集</el-button>
-      <el-form :model="form">
-        <el-form-item>
-          <el-input v-model="form.setAdzoneId"></el-input>
-        </el-form-item>
-      </el-form>
+      <el-button type="primary" @click="insertPage">新增文章</el-button>
+      <!-- <el-button type="primary" @click="multipleDel">批量删除</el-button> -->
     </div>
     <el-table
       :data="list"
@@ -59,7 +55,7 @@
 </template>
 
 <script>
-import {delApi, getTbkShopListApi} from '@/views/API/admin.js'
+import {delApi, getTbkListApi} from '@/views/API/admin.js'
 
 export default {
   data () {
@@ -69,13 +65,11 @@ export default {
         page: 1,
         pageSize: 20
       },
-      total: 0,
-      form: {
-        setAdzoneId: '110370750126L'
-      }
+      total: 0
     }
   },
   created () {
+    this.getList()
   },
   methods: {
     insertPage () {
@@ -84,13 +78,10 @@ export default {
       })
     },
     async getList () {
-      let res = await getTbkShopListApi(this.params)
+      let res = await getTbkListApi(this.params)
       if (res) {
         this.list = res.result
       }
-    },
-    start() {
-      this.getList()
     },
     async del (id) {
       let res = await delApi({id: id})
