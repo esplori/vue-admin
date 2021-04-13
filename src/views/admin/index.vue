@@ -25,7 +25,7 @@
                 </el-menu-item>
                 <el-menu-item index="/admin/caijiList">
                   <i class="el-icon-picture-outline"></i>
-                  商品采集列表
+                  采集列表
                 </el-menu-item>
                 <el-menu-item index="/admin/caiji">
                   <i class="el-icon-picture-outline"></i>
@@ -38,6 +38,10 @@
                  <el-menu-item index="/admin/sourceList">
                   <i class="el-icon-picture-outline"></i>
                   音乐收藏
+                </el-menu-item>
+                 <el-menu-item index="/admin/fundstock">
+                  <i class="el-icon-picture-outline"></i>
+                  基金股票
                 </el-menu-item>
                 <el-menu-item index="/admin/userInfo">
                   <i class="el-icon-user"></i>
