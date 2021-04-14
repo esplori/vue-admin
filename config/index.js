@@ -11,7 +11,14 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/': {
+      '/fund': {
+        target: 'http://fundgz.1234567.com.cn',
+        changeOrigin: true,  //是否跨域
+        pathRewrite: {
+          '/fund': ''   //需要rewrite重写的,
+        }
+      },
+      '/bootService': {
         target: 'http://localhost:8091',
         changeOrigin: true  //是否跨域
         // pathRewrite: {

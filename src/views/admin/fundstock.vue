@@ -1,7 +1,7 @@
 <template>
   <div class="page-list">
     <div class="handle">
-      <el-button type="primary" @click="getList">查询</el-button>
+      <el-button type="primary" @click="getOneFund">查询</el-button>
       <!-- <el-button type="primary" @click="multipleDel">批量删除</el-button> -->
     </div>
     <el-table :data="tableData" show-summary v-if="true">
@@ -94,13 +94,17 @@ export default {
     getOneFund() {
       for (let index = 0; index < this.jCodeList.length; index++) {
         const item = this.jCodeList[index];
-        this.getList(item);
+        this.api(item);
       }
     },
-    async getList(item) {
-      let res = await getFundApi(item);
+    async api(item) {
+      let res = await getFundApi({ code: item.code });
       if (res) {
-        this.tableData = res.result;
+        let st = res.replace("jsonpgz(", "").replace(");", "");
+        let jn = JSON.parse(st);
+        jn.lr = parseFloat(item.m * (jn.gszzl / 100)).toFixed(2);
+        this.tableData.push(jn);
+        console.log("this.tableData", this.tableData);
       }
     },
   },

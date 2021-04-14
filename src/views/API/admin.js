@@ -82,7 +82,7 @@ export async function getTbkShopListApi (data) {
   return get(url, data, options)
 }
 export async function getFundApi (data) {
-  const url = `http://fundgz.1234567.com.cn/js/${data.code}.js?rt=1463558676006`
+  const url = `/fund/js/${data.code}.js?rt=1463558676006`
   const options = {}
   return get(url, data, options)
 }
