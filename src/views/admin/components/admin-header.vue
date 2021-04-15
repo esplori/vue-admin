@@ -9,28 +9,26 @@
 
 <script>
 export default {
-  name: 'admin-header',
-  data () {
+  name: "admin-header",
+  data() {
     return {
-      menus: [
-        {name: '查看站点', path: '/'}
-      ]
-    }
+      menus: [{ name: "查看站点", path: "/" }],
+    };
   },
   components: {
-    userInfo: () => import('@/components/userInfo.vue')
-  }
-}
+    userInfo: () => import("@/components/userInfo.vue"),
+  },
+};
 </script>
 
 <style scoped lang="less">
-  .admin-header {
-    padding: 20px;
-    margin-bottom: 10px;
-    background: #fff;
-    color: #71777c;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #f1f1f1;
-  }
+.admin-header {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #71777c;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+}
 </style>

@@ -4,11 +4,18 @@
     <div class="container">
       <el-row>
         <el-col :span="4">
-          <el-menu default-active="/admin/pageList" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
-                   :collapse="isCollapse" :router="true" :unique-opened="false">
+          <el-menu
+            default-active="/admin/pageList"
+            class="el-menu-vertical-demo"
+            @open="handleOpen"
+            @close="handleClose"
+            :collapse="isCollapse"
+            :router="true"
+            :unique-opened="false"
+          >
             <el-submenu index="1">
               <template slot="title">
-                <span slot="title">控制台</span>
+                <span slot="title">DSIAB</span>
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/admin/home">
@@ -19,12 +26,12 @@
                   <i class="el-icon-setting"></i>
                   文章管理
                 </el-menu-item>
-                 <el-menu-item index="/admin/post">
+                <el-menu-item index="/admin/post">
                   <i class="el-icon-setting"></i>
                   新增文章
                 </el-menu-item>
                 <el-menu-item index="/admin/cate">
-                 <i class="el-icon-s-operation"></i>
+                  <i class="el-icon-s-operation"></i>
                   分类管理
                 </el-menu-item>
                 <el-menu-item index="/admin/navigationList">
@@ -39,15 +46,15 @@
                   <i class="el-icon-picture-outline"></i>
                   商品采集
                 </el-menu-item>
-                 <el-menu-item index="/admin/sourceList">
+                <el-menu-item index="/admin/sourceList">
                   <i class="el-icon-picture-outline"></i>
                   资源管理
                 </el-menu-item>
-                 <el-menu-item index="/admin/sourceList">
+                <el-menu-item index="/admin/sourceList">
                   <i class="el-icon-picture-outline"></i>
                   音乐收藏
                 </el-menu-item>
-                 <el-menu-item index="/admin/fundstock">
+                <el-menu-item index="/admin/fundstock">
                   <i class="el-icon-picture-outline"></i>
                   基金股票
                 </el-menu-item>
@@ -59,7 +66,7 @@
             </el-submenu>
           </el-menu>
         </el-col>
-        <el-col :span="20" style="overflow-y: auto!important;">
+        <el-col :span="20" style="overflow-y: auto !important">
           <div class="right-content">
             <adminHeader></adminHeader>
             <router-view></router-view>
@@ -72,48 +79,46 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      isCollapse: false
-    }
+      isCollapse: false,
+    };
   },
   components: {
-    adminHeader: () => import('./components/admin-header')
+    adminHeader: () => import("./components/admin-header"),
   },
   methods: {
-    handleOpen () {},
-    handleClose () {}
-  }
-}
+    handleOpen() {},
+    handleClose() {},
+  },
+};
 </script>
 
 <style scoped lang="less">
-
-  .admin-index{
+.admin-index {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  .container {
     height: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    .container{
+    background: #fff;
+    .el-row {
       height: 100%;
-      background: #fff;
-      .el-row{
+      .el-col {
         height: 100%;
-        .el-col{
-          height: 100%;
-        }
-      }
-      .el-menu-vertical-demo {
-        height: 100%;
-      }
-      .right-content{
-        padding-left: 10px;
-        padding-right: 20px;
-        padding-bottom: 20px;
       }
     }
+    .el-menu-vertical-demo {
+      height: 100%;
+    }
+    .right-content {
+      padding-left: 10px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
   }
-
+}
 </style>
