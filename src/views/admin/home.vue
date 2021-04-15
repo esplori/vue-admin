@@ -1,0 +1,72 @@
+<template>
+  <div class="admin-home">
+    this is admin home
+  </div>
+</template>
+
+<script>
+import {delApi, getTbkListApi} from '@/views/API/admin.js'
+
+export default {
+  data () {
+    return {
+      list: [],
+      params: {
+        page: 1,
+        pageSize: 20
+      },
+      total: 0
+    }
+  },
+  created () {
+    this.getList()
+  },
+  methods: {
+    insertPage () {
+      this.$router.push({
+        path: 'post'
+      })
+    },
+    async getList () {
+      let res = await getTbkListApi(this.params)
+      if (res) {
+        this.list = res.result
+      }
+    },
+    async del (id) {
+      let res = await delApi({id: id})
+      if (res) {
+        this.$message.success('删除成功')
+        this.getList()
+      }
+    },
+    /**
+     * 编辑
+     */
+    edit (id) {
+      this.$router.push({path: 'post', query: {id: id}})
+    },
+    handleSizeChange (val) {
+      this.params.pageSize = val
+      this.getList()
+    },
+    handleCurrentChange (val) {
+      this.params.page = val
+      this.getList()
+    },
+    multipleDel (condition) {
+    }
+  }
+}
+</script>
+
+<style scoped lang="less">
+.page-list{
+  width: 100%;
+  .content-item{
+    font-size: 18px;
+    text-align: left;
+    padding: 5px;
+  }
+}
+</style>

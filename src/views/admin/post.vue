@@ -28,7 +28,7 @@
         <el-input v-model="form.keywords"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button @click="submit" type="primary">确定</el-button>
+        <el-button @click="submit" type="primary">提交</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -78,7 +78,7 @@ export default {
           formData.append("file", blobInfo.blob(), blobInfo.filename());
           xhr.send(formData);
         },
-        height: 800,
+        height: 400,
         menubar: true,
         plugins: [
           "advlist autolink lists link image charmap print preview anchor",

@@ -24,7 +24,11 @@ const router = new Router({
       children: [
         {
           path: '',
-          redirect: 'pageList'
+          redirect: 'home'
+        },
+        {
+          path: 'home',
+          component: () => import('@/views/admin/home')
         },
         {
           path: 'pageList',

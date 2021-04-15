@@ -11,9 +11,17 @@
                 <span slot="title">控制台</span>
               </template>
               <el-menu-item-group>
+                <el-menu-item index="/admin/home">
+                  <i class="el-icon-setting"></i>
+                  首页
+                </el-menu-item>
                 <el-menu-item index="/admin/pageList">
                   <i class="el-icon-setting"></i>
                   文章管理
+                </el-menu-item>
+                 <el-menu-item index="/admin/post">
+                  <i class="el-icon-setting"></i>
+                  新增文章
                 </el-menu-item>
                 <el-menu-item index="/admin/cate">
                  <i class="el-icon-s-operation"></i>
@@ -25,7 +33,7 @@
                 </el-menu-item>
                 <el-menu-item index="/admin/caijiList">
                   <i class="el-icon-picture-outline"></i>
-                  采集列表
+                  商品列表
                 </el-menu-item>
                 <el-menu-item index="/admin/caiji">
                   <i class="el-icon-picture-outline"></i>
