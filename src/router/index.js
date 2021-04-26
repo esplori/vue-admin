@@ -67,6 +67,14 @@ const router = new Router({
           component: () => import('@/views/admin/sourceList')
         },
         {
+          path: 'music',
+          component: () => import('@/views/admin/music')
+        },
+        {
+          path: 'codeCollect',
+          component: () => import('@/views/admin/codeCollect')
+        },
+        {
           path: 'caiji',
           component: () => import('@/views/admin/caiji')
         },

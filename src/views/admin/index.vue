@@ -3,7 +3,7 @@
   <div class="admin-index">
     <div class="container">
       <el-row>
-        <el-col :span="4">
+        <el-col :span="3">
           <el-menu
             default-active="/admin/pageList"
             class="el-menu-vertical-demo"
@@ -50,13 +50,17 @@
                   <i class="el-icon-picture-outline"></i>
                   资源管理
                 </el-menu-item>
-                <el-menu-item index="/admin/sourceList">
+                <el-menu-item index="/admin/music">
                   <i class="el-icon-picture-outline"></i>
                   音乐收藏
                 </el-menu-item>
                 <el-menu-item index="/admin/fundstock">
                   <i class="el-icon-picture-outline"></i>
                   基金股票
+                </el-menu-item>
+                <el-menu-item index="/admin/codeCollect">
+                  <i class="el-icon-picture-outline"></i>
+                  代码收藏
                 </el-menu-item>
                 <el-menu-item index="/admin/userInfo">
                   <i class="el-icon-user"></i>
@@ -66,7 +70,7 @@
             </el-submenu>
           </el-menu>
         </el-col>
-        <el-col :span="20" style="overflow-y: auto !important">
+        <el-col :span="21" style="overflow-y: auto !important">
           <div class="right-content">
             <adminHeader></adminHeader>
             <router-view></router-view>
